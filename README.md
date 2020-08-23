@@ -2,70 +2,30 @@
 
 ## Overview of Project
 
-At the most fundamental level, Jack needs help answering a question: How might we provide real-time suggestions for our client's ideal hotels? Your first task was to define what you meant by "ideal." So, over the course of the conversation, you narrowed that to hotels that were (1) within a given range of latitude and longitude and that (2) provided the right kind of weather for the client.
+At the most fundamental level, I needed to answer the question: How might we provide real-time suggestions for a travel client's ideal hotels? 
 
+My first task was to define "ideal." So, I narrowed my definition to hotels that were (1) within a given range of latitude and longitude and that (2) provided the right kind of weather for a client based on temperature preferences.
 
-### Purpose
+I then wrote code that used weather data to recommend and visualize ideal hotels based on clients' weather preferences.
 
-PlanMyTrip will use the data to recommend ideal hotels based on clients' weather preferences.
+To test the project, I used input statements to filter data for weather preferences, which then identified potential travel destinations and nearby hotels. 
+From the list of potential travel destinations, I chose four cities to create a travel itinerary. 
+Finally, using the Google Maps Directions API, I created a travel route between the four cities as well as a marker layer map.
 
 ## Resources
 
-- Data Source: 
-- Software: JupyterNotebook , Pandas Library, CitiPy, Python, APIs, JSON Traversals, Matplotlib, SciPy
+- Data Source: OpenWeatherMap, Google Maps
+- Software: JupyterNotebook , Pandas Library
 
-## Analysis and Challenges
-
-
-### Analysis Description
-
-Method: Create a Pandas DataFrame with 500 or more of the world's unique cities and their weather data in real time. This process will entail collecting, analyzing, and visualizing the data.
-
-Collect the Data
-
-Use the NumPy module to generate more than 1,500 random latitudes and longitudes.
-Use the citipy module to list the nearest city to the latitudes and longitudes.
-Use the OpenWeatherMap API to request the current weather data from each unique city in your list.
-Parse the JSON data from the API request.
-Collect the following data from the JSON file and add it to a DataFrame:
-City, country, and date
-Latitude and longitude
-Maximum temperature
-Humidity
-Cloudiness
-Wind speed
-
-Exploratory Analysis with Visualization
-
-Create scatter plots of the weather data for the following comparisons:
-Latitude versus temperature
-Latitude versus humidity
-Latitude versus cloudiness
-Latitude versus wind speed
-Determine the correlations for the following weather data:
-Latitude and temperature
-Latitude and humidity
-Latitude and cloudiness
-Latitude and wind speed
-Create a series of heatmaps using the Google Maps and Places API that showcases the following:
-Latitude and temperature
-Latitude and humidity
-Latitude and cloudiness
-Latitude and wind speed
-
-Visualize Travel Data
-
-Create a heatmap with pop-up markers that can display information on specific cities based on a customer's travel preferences. Complete these steps:
-
-Filter the Pandas DataFrame based on user inputs for a minimum and maximum temperature.
-Create a heatmap for the new DataFrame.
-Find a hotel from the cities' coordinates using Google's Maps and Places API, and Search Nearby feature.
-Store the name of the first hotel in the DataFrame.
-Add pop-up markers to the heatmap that display information about the city, current maximum temperature, and a hotel in the city.
-
-### Challenges and Difficulties Encountered
-
-
-## Results
-
-## Summary
+## File Organization
+- Weather_Database Folder
+  - `Weather_Database.ipynb` file which contains code and process for how I retrieved information from an API call to OpenWeatherMap.
+  - `WeatherPy_Database.csv` file which contains the weather data I collected in a csv.
+- Vacation_Search Folder
+  - `Vacation_Search.ipynb` file that contains code for creating a customer travel destination .
+  - `WeatherPy_vacation.csv` file output that contains hotel names for hotels that fall within a customer's ideal temperature zones.
+  - `WeatherPy_vacation_map.png` image of a travel destination map for ideal temperature zones.
+- Vacation_Itinerary Folder
+  - `Vacation_Itinerary.ipynb` file which has code that used Google Directions API to create a travel itinerary that shows the route between four cities chosen from the customer’s possible travel destinations.
+  - `The WeatherPy_travel_map.png` image of a travel itinerary that shows the route between four cities.
+  - `The WeatherPy_travel_map_markers.png` image showing a marker layer map with a pop-up marker for each city on the itinerary.
