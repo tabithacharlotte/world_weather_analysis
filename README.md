@@ -22,7 +22,7 @@ Finally, using the Google Maps Directions API, I created a travel route between 
   - `Weather_Database.ipynb` file which contains code and process for how I retrieved information from an API call to OpenWeatherMap.
   - `WeatherPy_Database.csv` file which contains the weather data I collected in a csv.
 - Vacation_Search Folder
-  - `Vacation_Search.ipynb` file that contains code for finding a customer's ideal travel destination .
+  - `Vacation_Search.ipynb` file that contains code for finding a customer's ideal travel destinations.
   - `WeatherPy_vacation.csv` file output that contains hotel names for hotels that fall within a customer's ideal temperature zones.
   - `WeatherPy_vacation_map.png` image of a travel destination map for ideal temperature zones.
 - Vacation_Itinerary Folder
